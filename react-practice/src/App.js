@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 
 import Button from "./components /Button";
 import Toggle from "./components /Toggle";
@@ -8,14 +8,39 @@ import TodoList from "./components /TodoList";
 
 function App() {
   return (
-      <div>
-            <Button label="Click Me" color="blue" />
-                  <Toggle />
-                        <HoverBox />
-                              <TrafficLight color="green" />
-                                    <TodoList />
-                                        </div>
-                                          );
-                                          }
+    <div className="app-container">
+      <h1 className="title">React Practice Dashboard</h1>
 
-                                          export default App;
+      <div className="grid">
+        <div className="card">
+          <h3>Buttons</h3>
+          <Button label="Primary" color="#3b82f6" />
+          <br /><br />
+          <Button label="Danger" color="#ef4444" />
+        </div>
+
+        <div className="card">
+          <h3>Toggle</h3>
+          <Toggle />
+        </div>
+
+        <div className="card">
+          <h3>Hover Effect</h3>
+          <HoverBox />
+        </div>
+
+        <div className="card">
+          <h3>Traffic Light</h3>
+          <TrafficLight color="green" />
+        </div>
+
+        <div className="card">
+          <h3>Todo List</h3>
+          <TodoList />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default App;
